@@ -70,7 +70,7 @@ const Detail = ({ route, navigation }) => {
           },
           trigger: null, // Send immediately
         });
-      } else {
+d      } else {
         Alert.alert('Error', 'Failed to unlock the home.');
       }
     } catch (error) {
@@ -84,9 +84,9 @@ const Detail = ({ route, navigation }) => {
       <Text style={styles.address}>{home.address}</Text>
       <Text style={styles.description}>{home.description}</Text>
       <TouchableOpacity
-        style={[styles.unlockButton, isWithinRange && styles.disabledButton]}
+        style={[styles.unlockButton, !isWithinRange && styles.disabledButton]}
         onPress={handleUnlock}
-        disabled={isWithinRange}
+        disabled={!isWithinRange}
       >
         <Text style={styles.unlockButtonText}>Unlock</Text>
       </TouchableOpacity>
