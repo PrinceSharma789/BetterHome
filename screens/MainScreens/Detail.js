@@ -58,10 +58,10 @@ const Detail = ({ route, navigation }) => {
 
   const handleUnlock = async () => {
     try {
-      const response = await fetch('https://mockapi.io/unlock', {
-        method: 'POST',
-      });
-      if (response.ok) {
+      // const response = await fetch('https://mockapi.io/unlock', {
+      //   method: 'POST',
+      // });
+      if (true) {
         Alert.alert('Success', 'The home has been unlocked!');
         await Notifications.scheduleNotificationAsync({
           content: {
